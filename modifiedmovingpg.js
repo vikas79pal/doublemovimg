@@ -114,7 +114,7 @@ layer3.addEventListener("touchend",(e)=>{
 
         }
         // this is for same category next img
-        else if((diffY>diffX && diffY>15) ){
+        else if((diffY>diffX && diffY>25) ){
             console.log("this is for same category next img,++")
             if (currentCatImg<leftCircles.children.length-1){
                 console.log("hiii elseee")
@@ -160,7 +160,7 @@ if (diffX<=0 && diffY<=0 ){
 
     }
     // this is for same category next img
-    else if(diffX>diffY && diffY<-15  ){
+    else if(diffX>diffY && diffY<-25  ){
 
         if (currentCatImg>0){
             console.log("this is for same category next img,++ currentimg before",currentCatImg)
@@ -209,7 +209,7 @@ if (diffX>=0 && diffY<=0){
         
 
     }
-    else if((diffY>diffX && diffY>15) ){
+    else if((diffY>diffX && diffY>25) ){
         console.log("this is for same category next img")
         if (currentCatImg<leftCircles.children.length-1){
             console.log("hiii elseee")
@@ -257,7 +257,7 @@ if (diffX<=0 && diffY>=0){
 
     }
     // this is for same category next img
-    else if(diffX>diffY && diffY<-15  ){
+    else if(diffX>diffY && diffY<-25  ){
         if (currentCatImg>0){
             console.log("this is for same category next img,++ currentimg before",currentCatImg)
             leftCircles.children[currentCatImg].style.listStyle="circle";
