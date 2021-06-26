@@ -114,19 +114,18 @@ layer3.addEventListener("touchend",(e)=>{
 
         }
         // this is for same category next img
-        else if((diffY>diffX && diffY>20) ){
+        else if((diffY>diffX && diffY>15) ){
             console.log("this is for same category next img,++")
-            if (currentCatImg>0){
-                console.log("this is for same category next img,++ currentimg before",currentCatImg)
+            if (currentCatImg<leftCircles.children.length-1){
+                console.log("hiii elseee")
+    
                 leftCircles.children[currentCatImg].style.listStyle="circle";
-                currentCatImg-=1
-                console.log("this is for same category next img,++ currentimg after",currentCatImg)
+                currentCatImg+=1
                 imgholder.children[0].src=cate[currentCat][currentCatImg]
-                console.log(imgholder.children[0].src=cate[currentCat][currentCatImg])
                 leftCircles.children[currentCatImg].style.listStyle="disc"
             }
             else{
-                currentCatImg=0;
+                currentCatImg=leftCircles.children.length-1;
             }
         }
         
@@ -161,17 +160,19 @@ if (diffX<=0 && diffY<=0 ){
 
     }
     // this is for same category next img
-    else if(diffX>diffY && diffY<-20  ){
-        if (currentCatImg<leftCircles.children.length-1){
-            console.log("hiii elseee")
+    else if(diffX>diffY && diffY<-15  ){
 
+        if (currentCatImg>0){
+            console.log("this is for same category next img,++ currentimg before",currentCatImg)
             leftCircles.children[currentCatImg].style.listStyle="circle";
-            currentCatImg+=1
+            currentCatImg-=1
+            console.log("this is for same category next img,++ currentimg after",currentCatImg)
             imgholder.children[0].src=cate[currentCat][currentCatImg]
+            console.log(imgholder.children[0].src=cate[currentCat][currentCatImg])
             leftCircles.children[currentCatImg].style.listStyle="disc"
         }
         else{
-            currentCatImg=leftCircles.children.length-1;
+            currentCatImg=0;
         }
     }
     
@@ -208,17 +209,18 @@ if (diffX>=0 && diffY<=0){
         
 
     }
-    else if((diffY>diffX && diffY>20) ){
+    else if((diffY>diffX && diffY>15) ){
         console.log("this is for same category next img")
-        if (currentCatImg>0){
+        if (currentCatImg<leftCircles.children.length-1){
+            console.log("hiii elseee")
 
             leftCircles.children[currentCatImg].style.listStyle="circle";
-            currentCatImg-=1
+            currentCatImg+=1
             imgholder.children[0].src=cate[currentCat][currentCatImg]
             leftCircles.children[currentCatImg].style.listStyle="disc"
         }
         else{
-            currentCatImg=0;
+            currentCatImg=leftCircles.children.length-1;
         }
     }
 
@@ -255,17 +257,18 @@ if (diffX<=0 && diffY>=0){
 
     }
     // this is for same category next img
-    else if(diffX>diffY && diffY<-20  ){
-        if (currentCatImg<leftCircles.children.length-1){
-            console.log("hiii elseee")
-
+    else if(diffX>diffY && diffY<-15  ){
+        if (currentCatImg>0){
+            console.log("this is for same category next img,++ currentimg before",currentCatImg)
             leftCircles.children[currentCatImg].style.listStyle="circle";
-            currentCatImg+=1
+            currentCatImg-=1
+            console.log("this is for same category next img,++ currentimg after",currentCatImg)
             imgholder.children[0].src=cate[currentCat][currentCatImg]
+            console.log(imgholder.children[0].src=cate[currentCat][currentCatImg])
             leftCircles.children[currentCatImg].style.listStyle="disc"
         }
         else{
-            currentCatImg=leftCircles.children.length-1;
+            currentCatImg=0;
         }
     }
 }
