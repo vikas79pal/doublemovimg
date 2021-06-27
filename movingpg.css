@@ -171,7 +171,7 @@ background-color: blue;
   and (-webkit-min-device-pixel-ratio: 2.75) { 
     .imgcont{
         
-        width:224px;
+        width:228px;
         height: 336px;
         object-fit: contain;
         
