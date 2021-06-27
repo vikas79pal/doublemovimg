@@ -114,7 +114,7 @@ layer3.addEventListener("touchend",(e)=>{
 
         }
         // this is for same category next img
-        else if((diffY>diffX && diffY>30) ){
+        else if((diffY>diffX && diffY>25) ){
             console.log("this is for same category next img,++")
             if (currentCatImg<leftCircles.children.length-1){
                 console.log("hiii elseee")
@@ -209,7 +209,7 @@ if (diffX>=0 && diffY<=0){
         
 
     }
-    else if((diffY>diffX && diffY>30) ){
+    else if((diffY>diffX && diffY>25) ){
         console.log("this is for same category next img")
         if (currentCatImg<leftCircles.children.length-1){
             console.log("hiii elseee")
